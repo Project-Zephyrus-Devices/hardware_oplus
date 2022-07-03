@@ -93,6 +93,10 @@ Return<void> BiometricsFingerprint::onFingerUp() {
     return mOplusBiometricsFingerprint->onFingerUp();
 }
 
+Return<void> BiometricsFingerprint::onShowUdfpsOverlay() { return Void(); }
+
+Return<void> BiometricsFingerprint::onHideUdfpsOverlay() { return Void(); }
+
 Return<void> BiometricsFingerprint::onEnrollResult(uint64_t deviceId, uint32_t fingerId,
                                                    uint32_t groupId, uint32_t remaining) {
     return mClientCallback->onEnrollResult(deviceId, fingerId, groupId, remaining);
